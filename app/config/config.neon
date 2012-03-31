@@ -1,0 +1,35 @@
+common:
+	parameters:
+		db:
+			dsn: "sqlite://%dataDir%/sqlite3.db"
+		selenium:
+			host: localhost
+			browser: firefox
+			browserUrl: http://localhost/testovani/www/
+
+	php:
+		date.timezone: Europe/Prague
+
+	nette:
+		session:
+			autoStart: smart
+		database:
+			default:
+				dsn: %db.dsn%
+
+	services:
+		cache:
+			class: Nette\Caching\Cache
+		database: @Nette\Database\Connection
+		ArticleFacade:
+			class: ArticleFacade(@ArticleRepositoryCached)
+		ArticleRepositoryCached:
+			class: ArticleRepositoryCached(@ArticleRepositorySqlite, @cache)
+		ArticleRepositorySqlite:
+			class: ArticleRepositorySqlite
+
+	factories:
+
+production < common:
+
+development < common:

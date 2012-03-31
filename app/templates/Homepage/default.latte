@@ -1,0 +1,11 @@
+{block content}
+
+	{foreach $articles as $article}
+		<div>
+			<h2><a href="{link ArticleDetail:default id => $article->id}">{$article->name}</a></h2>
+			<small>Seen: {$article->seen}</small>
+			<p>{$article->content}</p>
+		</div>
+	{/foreach}
+
+{/block}

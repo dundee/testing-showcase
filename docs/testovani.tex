@@ -1,0 +1,107 @@
+\documentclass{beamer}
+
+\usepackage[czech]{babel}
+%\usepackage[latin2]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\PrerenderUnicode{áířě}
+\usepackage{fancybox}
+
+\mode<presentation>
+{
+	\usetheme{Warsaw}
+}
+
+\newcommand{\bitem}{\begin{itemize}}
+\newcommand{\eitem}{\end{itemize}}
+
+%\pgfdeclareimage[height=0.5cm]{university-logo}{LogoCVUT}
+%\logo{\pgfuseimage{university-logo}}
+
+\title {Testování}
+\subtitle {}
+
+\author {Daniel Milde}
+\date {březen 2012}
+\institute[medio]
+{
+  \inst{}
+  Medio Interactive
+}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Proč testovat?}
+		\begin{block}{Protože už to stejně děláme}
+			Ale ne automatizovaně
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Proč testovat?}
+		\begin{block}{Protože se to vyplatí}
+			\begin{itemize}
+				\item Nejsou potřeba testeři
+				\item Nemusíme tolik debuggovat
+				\item Daleko méně chyb na produkci
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Proč testovat?}
+		\begin{block}{Protože je to zábava}
+			Většinou :)
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Proč testovat?}
+		\begin{block}{Protože se nám bude lépe spát}
+			\begin{itemize}
+				\item Máme větší jistotu, že náš kód funguje
+				\item Méně  ``příjemných'' hovorů od zákazníka
+				\item Bezbolestný refactoring
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Druhy testů}
+		\begin{block}{}
+			\begin{itemize}
+				\item GUI (end2end) testy - Selenium
+				\item Integrační testy
+				\item Unit testy
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Ukázky}
+		\begin{block}{}
+			Ukázka psaní selenium testů v PHPUnitu
+		\end{block}
+	\end{frame}			
+	
+	\begin{frame}
+		\frametitle{Ukázky}
+		\begin{block}{}
+			Ukázka psaní unit a integračních testů v PHPUnitu
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}
+		\begin{block}{Děkuji za pozornost}
+		Otázky?
+		\end{block}
+	\end{frame}
+	
+\end{document}
