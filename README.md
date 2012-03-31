@@ -9,26 +9,29 @@ Database can be created using:
 
 ## Running tests ##
 
-### Unit tests ###
+### Unit & integration tests ###
 
 Install PHPUnit:
 
 	pear config-set auto_discover 1
 	pear install pear.phpunit.de/PHPUnit
 
-Run unit tests:
+Run unit & integration tests:
 
 	cd tests
 	phpunit ./app
 
 ### Selenium tests ###
 
-1. Download Selenium server (JAR).
-2. Run Selenium server:
+Download Selenium server (JAR):
+
+	http://selenium.googlecode.com/files/selenium-server-standalone-2.20.0.jar
+
+Run Selenium server:
 
 	java -jar selenium-server-standalone.jar
 
-3. Run selenium tests:
+Run selenium tests:
 
 	cd tests
 	phpunit ./selenium
