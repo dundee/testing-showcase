@@ -37,8 +37,7 @@ class ArticleRepositoryCachedTest extends UnitTestCase
 			->method('save')
 			->with('article-1', $article);
 
-		$article = $this->cachedRepository->findById(1);
-		$this->assertEquals($article, $article);
+		$this->assertEquals($article, $this->cachedRepository->findById(1));
 	}
 
 	public function testFindByIdCached()
